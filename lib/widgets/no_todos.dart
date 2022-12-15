@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:todo_app/common_functions/app_ops.dart';
 import 'package:todo_app/utilities/app_enums.dart';
 import 'package:todo_app/widgets/stadium_button.dart';
@@ -17,7 +18,7 @@ class NoTodos extends StatelessWidget {
           SizedBox(
             width: 256,
             child: Text(
-              'You have no todos, click to add one',
+              AppLocalizations.of(context)!.addOneDesc,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelLarge,
             ),
@@ -26,7 +27,7 @@ class NoTodos extends StatelessWidget {
             height: 8,
           ),
           StadiumButton(
-              text: 'Add One',
+              text: AppLocalizations.of(context)!.addOne,
               action: () =>
                   createEditTodo(context, isMobile, CurrentAction.creating))
         ],

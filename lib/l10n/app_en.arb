@@ -1,0 +1,17 @@
+{
+    "addOne": "Add One",
+    "toDo" : "To-do",
+    "toDoCap" : "To-Do",
+    "addOneDesc" : "You have no to-dos, click to add one",
+    "appName" : "To-Do App",
+    "newTodo" : "New To-do",
+    "editTodo" : "Edit To-do",
+    "save" : "Save",
+    "cancel" : "Cancel",
+    "title" : "Title",
+    "extraText" : "Extra text",
+    "required" : "Required",
+    "delete" : "Delete",
+    "deleteConfirmation" : "Are you sure you want to delete this to-do?",
+    "noTodoSelected" : "No to-do selected"
+}

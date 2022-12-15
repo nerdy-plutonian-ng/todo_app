@@ -1,0 +1,17 @@
+{
+    "addOne": "Agrega Uno",
+    "toDoCap" : "Que Hacer",
+    "toDo" : "que hacer",
+    "addOneDesc" : "No tienes una tarea pendiente, haz clic para agregar una",
+    "appName" : "Tareas pendientes",
+    "newTodo" : "Nueva tarea pendiente",
+    "editTodo" : "Editar tareas pendientes",
+    "save" : "ahorrar",
+    "cancel" : "cancelar",
+    "title" : "Título",
+    "extraText" : "Texto adicional",
+    "required" : "Requerido",
+    "delete" : "Borrar",
+    "deleteConfirmation" : "¿Seguro que quieres eliminar esta tarea pendiente?",
+    "noTodoSelected" : "No se ha seleccionado ninguna tarea"
+}

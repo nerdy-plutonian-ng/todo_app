@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/common_functions/app_ops.dart';
 import 'package:todo_app/models/todos_state.dart';
@@ -14,7 +15,7 @@ class MobileHomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todo App'),
+        title: Text(AppLocalizations.of(context)!.appName),
         actions: [
           IconButton(
               onPressed: () {

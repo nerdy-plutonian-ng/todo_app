@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/common_functions/app_ops.dart';
 import 'package:todo_app/models/todos_state.dart';
@@ -30,13 +31,13 @@ class TodosList extends StatelessWidget {
                           direction: DismissDirection.endToStart,
                           background: Container(
                             color: Colors.red,
-                            child: const Align(
+                            child: Align(
                                 alignment: Alignment.centerRight,
                                 child: Padding(
-                                  padding: EdgeInsets.only(right: 16.0),
+                                  padding: const EdgeInsets.only(right: 16.0),
                                   child: Text(
-                                    'Delete',
-                                    style: TextStyle(color: Colors.white),
+                                    AppLocalizations.of(context)!.delete,
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                 )),
                           ),

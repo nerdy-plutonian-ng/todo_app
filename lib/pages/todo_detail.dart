@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/common_functions/app_ops.dart';
 import 'package:todo_app/models/todo.dart';
@@ -79,7 +80,7 @@ class _TodoDetailState extends State<TodoDetail> {
                     size: 32,
                     color: Theme.of(context).colorScheme.primary,
                   ),
-                  const Text('No todo selected'),
+                  Text(AppLocalizations.of(context)!.noTodoSelected),
                 ],
               ),
             )
@@ -92,21 +93,21 @@ class _TodoDetailState extends State<TodoDetail> {
                     children: [
                       Text(
                         todosState.currentAction == CurrentAction.creating
-                            ? 'New Todo'
-                            : 'Edit Todo',
+                            ? AppLocalizations.of(context)!.newTodo
+                            : AppLocalizations.of(context)!.editTodo,
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           StadiumButton(
-                              text: 'Save',
+                              text: AppLocalizations.of(context)!.save,
                               action: () => todosState.currentAction ==
                                       CurrentAction.creating
                                   ? createTodo(todosState)
                                   : editTodo(todosState)),
                           TextStadiumButton(
-                              text: 'Cancel',
+                              text: AppLocalizations.of(context)!.cancel,
                               action: () {
                                 todosState.reset();
                                 if (widget.isMobile) {
@@ -134,13 +135,13 @@ class _TodoDetailState extends State<TodoDetail> {
                             },
                             keyboardType: TextInputType.text,
                             textInputAction: TextInputAction.next,
-                            decoration: const InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Title',
+                            decoration: InputDecoration(
+                                border: const OutlineInputBorder(),
+                                labelText: AppLocalizations.of(context)!.title,
                                 isDense: true),
                             validator: (text) {
                               if (text == null || text.isEmpty) {
-                                return 'Required';
+                                return AppLocalizations.of(context)!.required;
                               }
                               return null;
                             },
@@ -159,9 +160,10 @@ class _TodoDetailState extends State<TodoDetail> {
                             textInputAction: TextInputAction.done,
                             minLines: 1,
                             maxLines: 5,
-                            decoration: const InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Extra text',
+                            decoration: InputDecoration(
+                                border: const OutlineInputBorder(),
+                                labelText:
+                                    AppLocalizations.of(context)!.extraText,
                                 isDense: true),
                           ),
                         ],
@@ -185,7 +187,7 @@ class _TodoDetailState extends State<TodoDetail> {
                           });
                         },
                         icon: const Icon(Icons.delete_forever),
-                        label: const Text('Delete'))
+                        label: Text(AppLocalizations.of(context)!.delete))
                 ],
               ),
             );

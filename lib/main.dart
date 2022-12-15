@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/models/todos_state.dart';
 import 'package:todo_app/persistence/prefs_ops.dart';
@@ -45,6 +47,16 @@ class TodoApp extends StatelessWidget {
                   : Brightness.dark),
         ),
         onGenerateRoute: (routeSettings) => generateRoute(routeSettings),
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('en'),
+          Locale('es'),
+        ],
       );
     });
   }
