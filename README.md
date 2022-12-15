@@ -1,6 +1,7 @@
 A simple todo app
 
-Supports mobile and tablet forms, light and dark themes and saves todos locally on disk
+Supports mobile and tablet forms, light and dark themes and saves todos locally on disk.
+Supports English and Spanish support
 
 Screenshots(Mobile)
 <p float="left">
